@@ -195,9 +195,9 @@
             label = "FUNC2";
             bindings = <
 &trans      &trans           &trans           &trans             &trans              &trans          &trans             &trans              &trans            &trans           &trans               &trans
-&trans      &kp F13          &kp F14          &kp F15            &kp F16             &kp F17         &none              &mwh RIGHT          &kp UP            &mwh LEFT        &none                &trans
-&trans      &hml LGUI F18    &hml LALT F19    &hml LSHFT F20     &hml LCTRL F17      &kp F18         &mwh DOWN          &kp LEFT            &kp DOWN          &kp RIGHT        &mkp MB4             &trans
-&trans      &none            &none            &none              &kp F19             &kp F20         &mwh UP            &mkp LCLK           &mkp MCLK         &mkp RCLK        &mkp MB5             &trans
+&trans      &kp F13          &kp F14          &kp F15            &kp F16             &kp F17         &none              &msc SCRL_RIGHT     &kp UP            &msc SCRL_LEFT   &none                &trans
+&trans      &hml LGUI F18    &hml LALT F19    &hml LSHFT F20     &hml LCTRL F17      &kp F18         &msc SCRL_DOWN     &kp LEFT            &kp DOWN          &kp RIGHT        &mkp MB4             &trans
+&trans      &none            &none            &none              &kp F19             &kp F20         &msc SCRL_UP       &mkp LCLK           &mkp MCLK         &mkp RCLK        &mkp MB5             &trans
                                               &trans             &trans              &trans          &trans             &trans
                                                                  &trans              &trans          &trans
             >;
