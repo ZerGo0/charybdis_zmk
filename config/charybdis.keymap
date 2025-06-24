@@ -123,7 +123,7 @@
         // LAYER_SYM = 1
         symbol_layer {
             label = "SYM";
-            bindings = 
+            bindings = <
         &trans      &trans           &trans                   &trans                          &trans                          &trans          &trans             &trans                   &trans                    &trans                     &trans               &trans
         &trans      &kp SLASH        &kp LS(SLASH)            &kp RA(N8)                      &kp RA(N9)                      &kp RA(NUBS)    &kp LS(N1)         &kp NUBS                 &kp LS(NUBS)              &kp LS(N5)                 &td1                 &trans
         &trans      &kp LS(N7)       &kp RA(MINUS)            &kp RA(N7)                      &kp RA(N0)                      &kp LS(N6)      &kp LS(MINUS)      &kp LS(N8)               &kp LS(N9)                &kp LS(DOT)                &kp LS(COMMA)        &trans
