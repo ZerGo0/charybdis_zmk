@@ -16,8 +16,8 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <2>;
-        scale-divisor = <2>;
+        scale-multiplier = <1>;
+        scale-divisor = <1>;
     };
 
     /* input config for snipe mode - auto-enabled on layer 3 (LAYER_FUNC2) */
@@ -28,7 +28,7 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <4>;
+        scale-multiplier = <1>;
         scale-divisor = <4>;
     };
 
