@@ -16,7 +16,7 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <1>;
+        scale-multiplier = <2>;
         scale-divisor = <2>;
     };
 
@@ -28,10 +28,9 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <1>;
+        scale-multiplier = <4>;
         scale-divisor = <4>;
     };
-
 
     /* adjust cooldown waiting period for mouse key layer after activated */
     ib_toggle_layer: ib_toggle_layer {
