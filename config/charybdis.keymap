@@ -126,8 +126,8 @@
             bindings = <
 &trans      &trans           &trans                   &trans                          &trans                          &trans          &trans             &trans                   &trans                    &trans                     &trans               &trans
 &trans      &kp DE_SLASH     &kp DE_QUESTION          &kp DE_LBKT                     &kp DE_RBKT                     &kp DE_LT       &kp DE_EXCL        &kp DE_LT                &kp DE_GT                 &kp DE_PERCENT             &td1                 &trans
-&trans      &kp DE_AMPS      &kp DE_UNDER             &kp DE_LPAR                     &kp DE_RPAR                     &kp DE_CARET    &kp DE_PLUS        &kp DE_ASTRK             &kp DE_EQUAL              &kp DE_COLON               &kp DE_SEMI          &trans
-&trans      &kp DE_AT        &kp DE_BSLH              &kp DE_RBKT                     &kp DE_PIPE                     &kp DE_DQT      &kp DE_MINUS       &kp DE_HASH              &kp DE_RBKT               &kp DE_TILDE               &kp DE_GRAVE         &trans
+&trans      &kp DE_AMPS      &kp DE_UNDER             &kp DE_LBRC                     &kp DE_RBRC                     &kp DE_CARET    &kp DE_PLUS        &kp DE_ASTRK             &kp DE_EQUAL              &kp DE_COLON               &kp DE_SEMI          &trans
+&trans      &kp DE_AT        &kp DE_BSLH              &kp DE_EQUAL                    &kp DE_PIPE                     &kp DE_DQT      &kp DE_RPAR        &kp DE_RBKT              &kp DE_LBKT               &kp DE_RBRC                &kp DE_GRAVE         &trans
                                                       &trans                          &trans                          &trans          &trans             &trans
                                                                                       &trans                          &trans          &trans
             >;
