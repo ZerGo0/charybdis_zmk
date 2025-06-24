@@ -158,7 +158,7 @@
 &kp ESC     &kp N1           &kp N2           &kp N3             &kp N4              &kp N5          &kp N6   &kp N7              &kp N8            &kp N9           &kp N0      &kp PSCRN
 &kp TAB     &kp Q            &kp W            &kp F              &kp P               &kp B           &kp J    &kp L               &kp U             &kp DE_Z         &td0        &kp DE_SEMICOLON
 &kp LSHFT   &hml LGUI A      &hml LALT R      &hml LSHFT S       &hml LCTRL T        &kp G           &kp M    &hmr RCTRL N        &hmr RSHFT E      &hmr LALT I      &kp O       &none
-&kp LCTRL   &kp DE_Y         &kp X            &kp C              &kp D               &kp V           &kp K    &kp H               &kp DE_COMMA      &kp DE_DOT       &kp DE_LBRC &td2
+&kp LCTRL   &kp DE_Y         &kp X            &kp C              &kp D               &kp V           &kp K    &kp H               &kp DE_COMMA      &kp DE_DOT       &kp DE_LBKT &td2
                                               &lt 3 SPACE        &kp ENTER           &mo 1           &kp DEL  &kp BSPC
                                                                  &mo 2               &mo 3           &mo 2
             >;
@@ -169,9 +169,9 @@
             label = "SYM";
             bindings = <
 &trans      &trans           &trans                   &trans                          &trans                          &trans          &trans             &trans                   &trans                    &trans                     &trans               &trans
-&trans      &kp DE_SLASH     &kp DE_QUESTION          &kp DE_LBKT                     &kp DE_RBKT                     &kp DE_LT       &kp DE_EXCL        &kp DE_LESS_THAN         &kp DE_GREATER_THAN       &kp DE_PERCENT             &td1                 &trans
-&trans      &kp DE_AMPS      &kp DE_UNDERSCORE        &kp DE_LPAR                     &kp DE_RPAR                     &kp DE_CARET    &kp DE_PLUS        &kp DE_ASTERISK          &kp DE_EQUAL              &kp DE_COLON               &kp DE_SEMICOLON     &trans
-&trans      &kp DE_AT        &kp DE_BSLH              &kp DE_RBRC                     &kp DE_PIPE                     &kp DE_DQUOT    &kp DE_MINUS       &kp DE_HASH              &kp DE_RBRC               &kp DE_TILDE               &kp DE_GRAVE         &trans
+&trans      &kp DE_SLASH     &kp DE_QUESTION          &kp DE_LBKT                     &kp DE_RBKT                     &kp DE_LT       &kp DE_EXCL        &kp DE_LT                &kp DE_GT                 &kp DE_PERCENT             &td1                 &trans
+&trans      &kp DE_AMPS      &kp DE_UNDER             &kp DE_LPAR                     &kp DE_RPAR                     &kp DE_CARET    &kp DE_PLUS        &kp DE_ASTRK             &kp DE_EQUAL              &kp DE_COLON               &kp DE_SEMI          &trans
+&trans      &kp DE_AT        &kp DE_BSLH              &kp DE_RBKT                     &kp DE_PIPE                     &kp DE_DQT      &kp DE_MINUS       &kp DE_HASH              &kp DE_RBKT               &kp DE_TILDE               &kp DE_GRAVE         &trans
                                                       &trans                          &trans                          &trans          &trans             &trans
                                                                                       &trans                          &trans          &trans
             >;
