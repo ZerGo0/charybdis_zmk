@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 50
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
 
 / {
     /* input config for mouse move mode */
@@ -19,8 +19,8 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <2>;
-        scale-divisor = <2>;
+        scale-multiplier = <1>;
+        scale-divisor = <1>;
     };
 
     /* input config for snipe mode - auto-enabled on layer 3 (LAYER_FUNC2) */
