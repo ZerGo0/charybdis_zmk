@@ -2,10 +2,7 @@
 
 ## Intro
 
-This repository offers pre-configured ZMK firmware designed for Wireless Charybdis keyboards, supporting both the ubiquitous QWERTY layout and the optimized Colemak DH layout. You can choose from two configurations:
-
-- Bluetooth and USB
-- Dongle
+This repository offers pre-configured ZMK firmware designed for Wireless Charybdis keyboards with QWERTY layout, supporting Bluetooth and USB connectivity.
 
 Additionally, this repository automatically generates SVG images of all layers in the keymap, and adds it to the README. It also provides high level instructions and resources on how to customize and build the firmware to meet your specific needs.
 
@@ -13,35 +10,31 @@ Check out the [Charybdis Mini Wireless build guide](https://github.com/280Zo/cha
 
 ## Usage
 
-If you'd like to use the pre-built firmware the files can be found in the [Actions Workflows](https://github.com/280Zo/charybdis-wireless-mini-zmk-firmware/actions?query=is%3Acompleted+branch%3Amain). To download them, log into Github, click the link, select the latest run that passed on the main branch, and download the applicable firmware. There are five firmware artifacts to choose from. If you're unsure which one to use, you probably want the firmware-charybdis-qwerty build.
+If you'd like to use the pre-built firmware the files can be found in the [Actions Workflows](https://github.com/280Zo/charybdis-wireless-mini-zmk-firmware/actions?query=is%3Acompleted+branch%3Amain). To download them, log into Github, click the link, select the latest run that passed on the main branch, and download the applicable firmware. There are two firmware artifacts to choose from:
 
 - **firmware-charybdis-qwerty** - Bluetooth/USB with QWERTY layout
-- **firmware-charybdis-qwerty-dongle** - Dongle with QWERTY layout
-- **firmware-charybdis-colemak** - Bluetooth/USB with Colemak DH layout
-- **firmware-charybdis-colemak-dongle** - Dongle with Colemak DH layout
 - **firmware-reset-nanov2** - Reset the firmware completely
 
 There are a few things to note about how the pre-built firmware is configured:
 
-- ZMK has terms for each side of a split keyboard. Central is the half that sends keyboard outputs over USB or advertises to other devices over bluetooth. Peripheral is the half that will only send keystrokes to the central once they are paired and connected through bluetooth. The Bluetooth/USB firmware uses the right side as central.
-- The dongle firmware will have much better battery life for the central side, but requires an extra MCU and can only be connected through the dongle.
-- The Bluetooth/USB firmware can connect through Bluetooth, but the central side will have a shorter battery life because it needs to maintain that connection.
+- ZMK has terms for each side of a split keyboard. Central is the half that sends keyboard outputs over USB or advertises to other devices over bluetooth. Peripheral is the half that will only send keystrokes to the central once they are paired and connected through bluetooth. The firmware uses the right side as central.
+- The firmware can connect through Bluetooth, but the central side will have a shorter battery life because it needs to maintain that connection.
   - The central side can also be plugged in to USB and the keyboard can be used when Bluetooth on the host computer isn't available (e.g. BIOS navigation)
 - To add support for the PMW3610 low power trackball sensor, badjeff's [zmk-pmw3610-driver](https://github.com/badjeff/zmk-pmw3610-driver), [ZMK Input Behavior Listener](https://github.com/badjeff/zmk-input-behavior-listener?tab=readme-ov-file), and [ZMK Split Peripheral Input Relay](https://github.com/badjeff/zmk-split-peripheral-input-relay) modules are included in the firmware.
 - eigatech's [zmk-configs](https://github.com/eigatech/zmk-config?tab=readme-ov-file) played a major role in getting badjeff's drivers and modules fully configured and are a great resource
-- A separate branch builds the Bluetooth/USB firmware using [inorichi's driver](https://github.com/inorichi/zmk-pmw3610-driver?tab=readme-ov-file) as an alternative to badjeff's driver.
+- A separate branch builds the firmware using [inorichi's driver](https://github.com/inorichi/zmk-pmw3610-driver?tab=readme-ov-file) as an alternative to badjeff's driver.
 - Pete Johanson (creator and lead of the ZMK firmware) developed a feature ([pointers-move-scroll](https://github.com/zmkfirmware/zmk/pull/2027)) that allows mouse keys to move and scroll. A successor feature ([pointers-with-input-processors](https://github.com/zmkfirmware/zmk/pull/2477)) was then developed that allows more flexibility. This feature is what will eventually be merged into the main ZMK branch, and it's what is used by this repo to build the firmware. Although it's not guranteed to be stable, it hasn't caused any noticible issues. That being said, if you'd prefer to use pointers-move-scroll which is in a stable state, you can update the west.yaml and adapt the config files accordingly.
 
 ## Flashing the Firmware
 
 Follow the steps below to flash the firmware
 
-- If you are flashing the firmware for the first time, or if you're switching between the dongle and the Bluetooth/USB configuration, flash the reset firmware to all the devices first
+- If you are flashing the firmware for the first time, flash the reset firmware to all the devices first
 - Unzip the firmware.zip
 - Plug the right half info the computer through USB
 - Double press the reset button
 - The keyboard will mount as a removable storage device
-- Copy the applicable uf2 file into the NICENANO storage device (e.g. charybdis_qwerty_dongle.uf2 -> dongle)
+- Copy the applicable uf2 file into the NICENANO storage device (e.g. charybdis_qwerty_right.uf2 -> right half)
 - It will take a few seconds, then it will unmount and restart itself.
 - Repeat these steps for all devices.
 - You should now be able to use your keyboard
@@ -70,7 +63,7 @@ Here are a few tips for a quick start:
 
 ### ZMK Studio
 
-[ZMK Studio](https://zmk.studio/) allows users to update functionality during runtime. It's currently in beta, but the physical layout and updated config files are included in the BT/USB firmware for testing. The dongle firmware does not have this integration at the moment.
+[ZMK Studio](https://zmk.studio/) allows users to update functionality during runtime. It's currently in beta, but the physical layout and updated config files are included in the firmware for testing.
 
 To change the visual layout of the keys, the physical layout must be updated. This is the charybdis-layouts.dtsi file, which handles the actual physical positions of the keys. Though they may appear to be similar, this is different than the matrix transform file (charybdis.json) which handles the electrical matrix to keymap relationship.
 
@@ -102,7 +95,7 @@ Open the keymap file and change keys, or add/remove layers, then merge the chang
 
 ## Changing the Central and Peripheral Assignments
 
-Follow the ZMK documentation [Kconfig.deconfig](https://zmk.dev/docs/development/new-shield#kconfigdefconfig) to change which keyboard half is the central and which is the peripheral. This does not apply to the dongle configuration.
+Follow the ZMK documentation [Kconfig.deconfig](https://zmk.dev/docs/development/new-shield#kconfigdefconfig) to change which keyboard half is the central and which is the peripheral.
 
 ## Changing the Keyboard Name
 
