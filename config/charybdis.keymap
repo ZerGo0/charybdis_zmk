@@ -73,7 +73,7 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp DE_SQT>, <&kp DE_MINUS>;
+            bindings = <&kp QUOTE>, <&kp MINUS>;
         };
 
         // Tap Dance 1: $ (single) / € (double)
@@ -82,7 +82,7 @@
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp DE_DOLLAR>, <&kp DE_EURO>;
+            bindings = <&kp LS(N4)>, <&kp RA(E)>;
         };
 
         // Tap Dance 2: HOME (single) / END (double)
@@ -94,13 +94,13 @@
             bindings = <&kp HOME>, <&kp END>;
         };
 
-        // Tap Dance 3: H (single) / , (double)
+        // Tap Dance 3: HOME (single) / END (double)
         td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_3";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp H>, <&kp DE_COMMA>;
+            bindings = <&kp HOME>, <&kp END>;
         };
     };
 
@@ -112,9 +112,9 @@
             label = "BASE";
             bindings = <
 &kp ESC     &kp N1           &kp N2           &kp N3             &kp N4              &kp N5          &kp N6   &kp N7              &kp N8            &kp N9           &kp N0      &kp PSCRN
-&kp TAB     &kp Q            &kp W            &kp F              &kp P               &kp B           &kp J    &kp L               &kp U             &kp DE_Z         &td0        &kp DE_SEMICOLON
+&kp TAB     &kp Q            &kp W            &kp F              &kp P               &kp B           &kp J    &kp L               &kp U             &kp Z            &td0        &kp SEMI
 &kp LSHFT   &hml LGUI A      &hml LALT R      &hml LSHFT S       &hml LCTRL T        &kp G           &kp M    &hmr RCTRL N        &hmr RSHFT E      &hmr LALT I      &kp O       &none
-&kp LCTRL   &kp DE_Y         &kp X            &kp C              &kp D               &kp V           &kp K    &kp H               &kp DE_COMMA      &kp DE_DOT       &kp DE_LBKT &td2
+&kp LCTRL   &kp Y            &kp X            &kp C              &kp D               &kp V           &kp K    &kp H               &kp COMMA         &kp DOT          &kp LBKT    &td2
                                               &lt 3 SPACE        &kp ENTER           &mo 1           &kp DEL  &kp BSPC
                                                                  &mo 2               &mo 3           &mo 2
             >;
@@ -123,11 +123,11 @@
         // LAYER_SYM = 1
         symbol_layer {
             label = "SYM";
-            bindings = <
-&trans      &trans           &trans                   &trans                          &trans                          &trans          &trans             &trans                   &trans                    &trans                     &trans               &trans
-&trans      &kp DE_SLASH     &kp DE_QUESTION          &kp DE_LBKT                     &kp DE_RBKT                     &kp DE_LT       &kp DE_EXCL        &kp DE_LT                &kp DE_GT                 &kp DE_PERCENT             &td1                 &trans
-&trans      &kp DE_AMPS      &kp DE_UNDER             &kp DE_LBRC                     &kp DE_RBRC                     &kp DE_CARET    &kp DE_PLUS        &kp DE_ASTRK             &kp DE_EQUAL              &kp DE_COLON               &kp DE_SEMI          &trans
-&trans      &kp DE_AT        &kp DE_BSLH              &kp DE_EQUAL                    &kp DE_PIPE                     &kp DE_DQT      &kp DE_RPAR        &kp DE_RBKT              &kp DE_LBKT               &kp DE_RBRC                &kp DE_GRAVE         &trans
+            bindings = 
+        &trans      &trans           &trans                   &trans                          &trans                          &trans          &trans             &trans                   &trans                    &trans                     &trans               &trans
+        &trans      &kp SLASH        &kp LS(SLASH)            &kp RA(N8)                      &kp RA(N9)                      &kp RA(NUBS)    &kp LS(N1)         &kp NUBS                 &kp LS(NUBS)              &kp LS(N5)                 &td1                 &trans
+        &trans      &kp LS(N7)       &kp RA(MINUS)            &kp RA(N7)                      &kp RA(N0)                      &kp LS(N6)      &kp LS(MINUS)      &kp LS(N8)               &kp LS(N9)                &kp LS(DOT)                &kp LS(COMMA)        &trans
+        &trans      &kp RA(Q)        &kp BSLH                 &kp LS(EQUAL)                   &kp LS(BSLH)                    &kp LS(N2)      &kp LS(N0)         &kp LS(RBKT)             &kp RBKT                  &kp RA(RBKT)               &kp GRAVE            &trans
                                                       &trans                          &trans                          &trans          &trans             &trans
                                                                                       &trans                          &trans          &trans
             >;
