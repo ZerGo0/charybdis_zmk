@@ -96,19 +96,10 @@ jobs:
           echo "shield=${shield}" >> $GITHUB_ENV
           echo "artifact_name=${artifact_name:-${shield:+$shield-}${board}-zmk}" >> $GITHUB_ENV
 
-      - name: Download keymaps
-        uses: actions/download-artifact@v4
-        with:
-          name: keymap_files
-          path: "${{ github.workspace }}/"
-
-      - name: Copy keymaps to keymap directory
+      - name: Copy keymap to keymap directory
         run: |
-          rm -f $GITHUB_WORKSPACE/config/*.keymap
           mkdir -p "$GITHUB_WORKSPACE/${{ inputs.keymap_path }}/"
-          cd "$GITHUB_WORKSPACE"
-          mv charybdis.keymap qwerty.keymap
-          mv *.keymap "$GITHUB_WORKSPACE/${{ inputs.keymap_path }}/"
+          cp "$GITHUB_WORKSPACE/config/charybdis.keymap" "$GITHUB_WORKSPACE/${{ inputs.keymap_path }}/qwerty.keymap"
           ls -lR "$GITHUB_WORKSPACE/${{ inputs.keymap_path }}/"
 
       - name: Copy config files to isolated temporary directory
@@ -280,8 +271,3 @@ jobs:
           name: firmware-reset-nanov2
           delete-merged: true
 
-      - name: Delete keymap artifacts
-        continue-on-error: true
-        uses: geekyeggo/delete-artifact@v5
-        with:
-          name: keymap_files
