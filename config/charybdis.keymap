@@ -73,7 +73,7 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp QUOTE>, <&kp MINUS>;
+            bindings = <&kp SQT>, <&kp MINUS>;
         };
 
         // Tap Dance 1: $ (single) / € (double)
