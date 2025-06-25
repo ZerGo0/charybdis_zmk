@@ -10,28 +10,11 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 / {
-    /* input config for mouse move mode */
+    /* input config for trackball - official ZMK uses different configuration */
+    /* Layer-specific behavior and scaling must be handled differently in official ZMK */
     trackball_listener {
         compatible = "zmk,input-listener";
-        device = <&vtrackball>;
-        layers = <0 1 2>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <1>;
-        scale-divisor = <1>;
-    };
-
-    /* input config for snipe mode - auto-enabled on layer 3 (LAYER_FUNC2) */
-    trackball_snipe_listener {
-        compatible = "zmk,input-listener";
-        device = <&vtrackball>;
-        layers = <3>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <4>;
-        scale-divisor = <4>;
+        device = <&trackball>;
     };
 
     /* Custom input behavior toggle layer - removed as it was from custom modules */
