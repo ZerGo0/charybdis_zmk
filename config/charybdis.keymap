@@ -1,3 +1,5 @@
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 50
+
 #include "keys_de_swiss.h"
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
@@ -5,9 +7,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 75
 
 / {
     /* input config for trackball - official ZMK uses different configuration */
